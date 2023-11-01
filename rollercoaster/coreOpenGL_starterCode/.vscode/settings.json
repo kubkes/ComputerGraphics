@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "__config": "cpp",
+        "__nullptr": "cpp",
+        "ostream": "cpp",
+        "ratio": "cpp",
+        "vector": "cpp",
+        "iostream": "cpp"
+    }
+}

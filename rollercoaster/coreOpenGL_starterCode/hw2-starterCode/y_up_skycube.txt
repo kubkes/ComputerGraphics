@@ -1,0 +1,102 @@
+ // This code is for skycube texture when y is up in the coordinate system
+ // I made this first but then changed it to z-up, but I wanted to save this calculation
+ 
+ // distance of the cube sky box
+  float distSkyCubeTex = 200.0f;
+
+  // Positions and texture coordinates of cube sky box
+  // negative x - vertices of the square: (-,-,-),(-,+,-),(-,+,+),(-,-,+)
+  // negative x - triangle 1
+  texPos_nx.push_back(glm::vec3(+distSkyCubeTex,-distSkyCubeTex,-distSkyCubeTex));
+  texPos_nx.push_back(glm::vec3(+distSkyCubeTex,-distSkyCubeTex,+distSkyCubeTex));
+  texPos_nx.push_back(glm::vec3(+distSkyCubeTex,+distSkyCubeTex,+distSkyCubeTex));
+  texUV_nx.push_back(glm::vec2(0.0f,0.0f));
+  texUV_nx.push_back(glm::vec2(1.0f,0.0f));
+  texUV_nx.push_back(glm::vec2(1.0f,1.0f));
+  // negative x - triangle 2
+  texPos_nx.push_back(glm::vec3(+distSkyCubeTex,-distSkyCubeTex,-distSkyCubeTex));
+  texPos_nx.push_back(glm::vec3(+distSkyCubeTex,+distSkyCubeTex,+distSkyCubeTex));
+  texPos_nx.push_back(glm::vec3(+distSkyCubeTex,+distSkyCubeTex,-distSkyCubeTex));
+  texUV_nx.push_back(glm::vec2(0.0f,0.0f));
+  texUV_nx.push_back(glm::vec2(1.0f,1.0f));
+  texUV_nx.push_back(glm::vec2(0.0f,1.0f));
+
+  // negative y - vertices of the square: (-,-,+),(+,-,+),(+,-,-),(-,-,-)
+  // negative y - triangle 1
+  texPos_ny.push_back(glm::vec3(-distSkyCubeTex,-distSkyCubeTex,+distSkyCubeTex));
+  texPos_ny.push_back(glm::vec3(+distSkyCubeTex,-distSkyCubeTex,+distSkyCubeTex));
+  texPos_ny.push_back(glm::vec3(-distSkyCubeTex,-distSkyCubeTex,-distSkyCubeTex));
+  texUV_ny.push_back(glm::vec2(0.0f,0.0f));
+  texUV_ny.push_back(glm::vec2(1.0f,0.0f));
+  texUV_ny.push_back(glm::vec2(0.0f,1.0f));
+  // negative y - triangle 2
+  texPos_ny.push_back(glm::vec3(+distSkyCubeTex,-distSkyCubeTex,+distSkyCubeTex));
+  texPos_ny.push_back(glm::vec3(+distSkyCubeTex,-distSkyCubeTex,-distSkyCubeTex));
+  texPos_ny.push_back(glm::vec3(-distSkyCubeTex,-distSkyCubeTex,-distSkyCubeTex));
+  texUV_ny.push_back(glm::vec2(1.0f,0.0f));
+  texUV_ny.push_back(glm::vec2(1.0f,1.0f));
+  texUV_ny.push_back(glm::vec2(0.0f,1.0f));
+
+  // negative z - vertices of the square: (-,-,-),(+,-,-),(+,+,-),(-,+,-)
+  // negative z - triangle 1
+  texPos_nz.push_back(glm::vec3(-distSkyCubeTex,-distSkyCubeTex,-distSkyCubeTex));
+  texPos_nz.push_back(glm::vec3(+distSkyCubeTex,-distSkyCubeTex,-distSkyCubeTex));
+  texPos_nz.push_back(glm::vec3(-distSkyCubeTex,+distSkyCubeTex,-distSkyCubeTex));
+  texUV_nz.push_back(glm::vec2(0.0f,0.0f));
+  texUV_nz.push_back(glm::vec2(1.0f,0.0f));
+  texUV_nz.push_back(glm::vec2(0.0f,1.0f));
+  // negative z - triangle 2
+  texPos_nz.push_back(glm::vec3(+distSkyCubeTex,-distSkyCubeTex,-distSkyCubeTex));
+  texPos_nz.push_back(glm::vec3(+distSkyCubeTex,+distSkyCubeTex,-distSkyCubeTex));
+  texPos_nz.push_back(glm::vec3(-distSkyCubeTex,+distSkyCubeTex,-distSkyCubeTex));
+  texUV_nz.push_back(glm::vec2(1.0f,0.0f));
+  texUV_nz.push_back(glm::vec2(1.0f,1.0f));
+  texUV_nz.push_back(glm::vec2(0.0f,1.0f));
+
+  // positive x - vertices of the square: (+,-,-),(+,-,+),(+,+,+),(+,+,-)
+  // positive x - triangle 1
+  texPos_px.push_back(glm::vec3(-distSkyCubeTex,-distSkyCubeTex,-distSkyCubeTex));
+  texPos_px.push_back(glm::vec3(-distSkyCubeTex,+distSkyCubeTex,+distSkyCubeTex));
+  texPos_px.push_back(glm::vec3(-distSkyCubeTex,-distSkyCubeTex,+distSkyCubeTex));
+  texUV_px.push_back(glm::vec2(1.0f,0.0f));
+  texUV_px.push_back(glm::vec2(0.0f,1.0f));
+  texUV_px.push_back(glm::vec2(0.0f,0.0f));
+  // positive x - triangle 2
+  texPos_px.push_back(glm::vec3(-distSkyCubeTex,-distSkyCubeTex,-distSkyCubeTex));
+  texPos_px.push_back(glm::vec3(-distSkyCubeTex,+distSkyCubeTex,-distSkyCubeTex));
+  texPos_px.push_back(glm::vec3(-distSkyCubeTex,+distSkyCubeTex,+distSkyCubeTex));
+  texUV_px.push_back(glm::vec2(1.0f,0.0f));
+  texUV_px.push_back(glm::vec2(1.0f,1.0f));
+  texUV_px.push_back(glm::vec2(0.0f,1.0f));
+
+  // positive y - vertices of the square: (-,+,+),(-,+,-),(+,+,-),(+,+,+)
+  // positive y - triangle 1
+  texPos_py.push_back(glm::vec3(-distSkyCubeTex,+distSkyCubeTex,+distSkyCubeTex));
+  texPos_py.push_back(glm::vec3(-distSkyCubeTex,+distSkyCubeTex,-distSkyCubeTex));
+  texPos_py.push_back(glm::vec3(+distSkyCubeTex,+distSkyCubeTex,+distSkyCubeTex));
+  texUV_py.push_back(glm::vec2(1.0f,0.0f));
+  texUV_py.push_back(glm::vec2(1.0f,1.0f));
+  texUV_py.push_back(glm::vec2(0.0f,0.0f));
+  // positive y - triangle 2
+  texPos_py.push_back(glm::vec3(+distSkyCubeTex,+distSkyCubeTex,+distSkyCubeTex));
+  texPos_py.push_back(glm::vec3(-distSkyCubeTex,+distSkyCubeTex,-distSkyCubeTex));
+  texPos_py.push_back(glm::vec3(+distSkyCubeTex,+distSkyCubeTex,-distSkyCubeTex));
+  texUV_py.push_back(glm::vec2(0.0f,0.0f));
+  texUV_py.push_back(glm::vec2(1.0f,1.0f));
+  texUV_py.push_back(glm::vec2(0.0f,1.0f));
+
+  // positive z - vertices of the square: (-,-,+),(-,+,+),(+,+,+),(+,-,+)
+  // positive z - triangle 1
+  texPos_pz.push_back(glm::vec3(-distSkyCubeTex,-distSkyCubeTex,+distSkyCubeTex));
+  texPos_pz.push_back(glm::vec3(-distSkyCubeTex,+distSkyCubeTex,+distSkyCubeTex));
+  texPos_pz.push_back(glm::vec3(+distSkyCubeTex,-distSkyCubeTex,+distSkyCubeTex));
+  texUV_pz.push_back(glm::vec2(1.0f,0.0f));
+  texUV_pz.push_back(glm::vec2(1.0f,1.0f));
+  texUV_pz.push_back(glm::vec2(0.0f,0.0f));
+  // positive z - triangle 2
+  texPos_pz.push_back(glm::vec3(+distSkyCubeTex,-distSkyCubeTex,+distSkyCubeTex));
+  texPos_pz.push_back(glm::vec3(-distSkyCubeTex,+distSkyCubeTex,+distSkyCubeTex));
+  texPos_pz.push_back(glm::vec3(+distSkyCubeTex,+distSkyCubeTex,+distSkyCubeTex));
+  texUV_pz.push_back(glm::vec2(0.0f,0.0f));
+  texUV_pz.push_back(glm::vec2(1.0f,1.0f));
+  texUV_pz.push_back(glm::vec2(0.0f,1.0f));
